@@ -60,3 +60,10 @@ int main()
             //Sleep(1000);
            // goto START;
         }
+    else if (strcmp(choice, "scissors") == 0 || strcmp(choice, "Scissors") == 0 || strcmp(choice, "S") == 0 || strcmp(choice, "s") == 0)
+        {
+            decision = 3;
+            printf("You chose Scissors\n\n\n");
+           // Sleep(1000);
+            //goto START;
+        }
