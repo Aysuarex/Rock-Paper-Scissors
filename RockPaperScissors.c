@@ -101,3 +101,9 @@ int main()
     printf("%s = %d\n", name, playerscore);
     printf("Computer = %d\n", computerscore);
 
+
+    Sleep(1000);
+    goto START;
+
+    return 0;
+}
