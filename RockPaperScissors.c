@@ -125,3 +125,8 @@ Scissors = 3
 */
 int checkWin()
 {
+    if (computer() == 1 && decision== 1) 
+    {
+        printf("Draw! You both chose Rock\n\n\n");
+        return (-1);
+    }
