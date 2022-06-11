@@ -150,3 +150,8 @@ int checkWin()
         printf("Draw! You both chose Paper\n\n\n");
         return (-1);
     }
+    else if (computer() == 3 && decision== 2)
+    {
+        printf("You Lose! Scissors cuts Paper\n\n\n");
+        return (0);
+    }
