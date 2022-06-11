@@ -53,3 +53,10 @@ int main()
            // Sleep(1000);
             //goto START;
         }
+    else if (strcmp(choice, "paper") == 0 || strcmp(choice, "Paper") == 0 ||  strcmp(choice, "P") == 0 || strcmp(choice, "p") == 0)
+        {
+            decision = 2;
+            printf("You chose Paper\n\n\n");
+            //Sleep(1000);
+           // goto START;
+        }
