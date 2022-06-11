@@ -38,3 +38,11 @@ int main()
     printf("Welcome to Rock, Paper Scissors!\n");
     printf("Input your Name (Max 10 Characters): ");
     scanf("%s", &name);
+    
+    Sleep(500);
+    START:
+
+    printf("\nMake a choice: Rock Paper or Scissors: \n");
+    printf("Type X to exit\n\t\t\t==> ");
+    scanf("%s", &choice);
+
