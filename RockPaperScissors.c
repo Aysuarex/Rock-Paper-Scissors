@@ -130,3 +130,8 @@ int checkWin()
         printf("Draw! You both chose Rock\n\n\n");
         return (-1);
     }
+    else if (computer() == 2 && decision== 1)
+    {
+        printf("You Lose! Paper wraps Rock\n\n\n");
+        return (0);
+    }
