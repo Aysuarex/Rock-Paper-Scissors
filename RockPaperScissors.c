@@ -27,3 +27,14 @@ char name[11];
 int decision;
 int playerscore = 0;
 int computerscore = 0;
+//char choice;
+
+int main()
+{
+    srand(time(NULL));
+    system("cls");
+
+    printf("=======================================\n");
+    printf("Welcome to Rock, Paper Scissors!\n");
+    printf("Input your Name (Max 10 Characters): ");
+    scanf("%s", &name);
