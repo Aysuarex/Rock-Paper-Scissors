@@ -96,3 +96,8 @@ int main()
     {
         playerscore++;
     }
+    
+    printf("Scoresheet\n");
+    printf("%s = %d\n", name, playerscore);
+    printf("Computer = %d\n", computerscore);
+
