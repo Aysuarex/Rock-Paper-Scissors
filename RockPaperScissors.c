@@ -67,3 +67,22 @@ int main()
            // Sleep(1000);
             //goto START;
         }
+    else if (strcmp(choice, "X") == 0 || strcmp(choice, "x") == 0)
+    {
+        exit(0);
+    }
+
+    else 
+    {
+        Sleep(500);
+        printf("\n------------------------------------\n");
+        printf("INVALID CHOICE!\n");
+        Sleep(500);
+        printf("Type rock, paper, or scissors to make a choice\n");
+        Sleep(1000);
+        printf("You can also simply type R, P or S\n\n\n");
+        //Sleep(1000);
+        //goto START;
+    }
+    Sleep(500);
+    checkWin();
