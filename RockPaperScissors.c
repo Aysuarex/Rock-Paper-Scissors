@@ -92,7 +92,7 @@ int main()
     {
         computerscore++;
     }
-    else if (checkWin == 1) //If player wins
+    else if(checkWin == 1) //If player wins
     {
         playerscore++;
     }
