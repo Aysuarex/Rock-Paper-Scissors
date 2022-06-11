@@ -46,3 +46,10 @@ int main()
     printf("Type X to exit\n\t\t\t==> ");
     scanf("%s", &choice);
 
+    if (strcmp(choice, "rock") == 0 || strcmp(choice, "Rock") == 0 || strcmp(choice, "R") == 0 || strcmp(choice, "r") == 0)
+        {
+            decision = 1;
+            printf("You chose Rock\n\n\n");
+           // Sleep(1000);
+            //goto START;
+        }
