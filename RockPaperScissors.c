@@ -86,3 +86,13 @@ int main()
     }
     Sleep(500);
     checkWin();
+
+    //To increase the scores
+    if (checkWin == 0) //If player loses
+    {
+        computerscore++;
+    }
+    else if (checkWin == 1) //If player wins
+    {
+        playerscore++;
+    }
