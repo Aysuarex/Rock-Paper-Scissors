@@ -107,3 +107,8 @@ int main()
 
     return 0;
 }
+
+int computer()
+{
+    return 1;
+}
