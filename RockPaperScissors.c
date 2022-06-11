@@ -112,3 +112,14 @@ int computer()
 {
     return 1;
 }
+
+/* For This Function:
+return value 1  ==> Player Won
+return value 0  ==> Computer Won
+return value -1 ==> Draw
+
+Also Recall:
+Rock = 1
+Paper = 2
+Scissors = 3
+*/
