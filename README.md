@@ -1,5 +1,7 @@
 # Rock-Paper-Scissors 🪨 🧻 ✂️
 
+![Rock-paper-scissors](https://user-images.githubusercontent.com/99369085/173250648-bd0c5632-75c5-4e28-a5a5-3bc049b92cdd.svg)
+
 ## Introduction :eyes: 
 This is a single-player game of Rock-Paper-Scissors played against the computer, made in C language.
 
