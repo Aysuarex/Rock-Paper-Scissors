@@ -3,8 +3,8 @@
  * @author Suara Ayomide(aysuarex@gmail.com)
  *  
  * main - A program that runs a game of rock-paper-scissors
- * computer - 
- * checkWin -
+ * checkWin - Checks the winner of the game
+ * computer - plays for the computer, generating a random result
  * 
  * @date 2022-06-11
  */
@@ -17,7 +17,7 @@
 
 
 int computer();
-int checkWin();
+int checkWin(); 
 int checkwin; //Variable storing the return value for checkWin() function
 int comp; // Variable that stores the return value of function computer()
 char choice[8];
