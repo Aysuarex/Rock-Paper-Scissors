@@ -1,4 +1,4 @@
-# Rock-Paper-Scissors :emoji:
+# Rock-Paper-Scissors 🪨 🧻 ✂️
 
 ## Introduction :eyes: 
 This is a ------ made in C language.
