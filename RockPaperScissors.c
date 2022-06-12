@@ -13,8 +13,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include <windows.h>
-#include <string.h>
-
 
 int computer();
 int checkWin(); 
@@ -22,7 +20,7 @@ int checkwin; //Variable storing the return value for checkWin() function
 int comp; // Variable that stores the return value of function computer()
 char choice[8];
 char name[11];
-int decision;
+int decision; //The player's input: rock, paper or scissors
 int random; //Variable that stores the last two digits of a randomly generated number
 int playerscore = 0;
 int computerscore = 0;
@@ -98,6 +96,12 @@ int main()
 
     return 0;
 }
+
+/*Note:
+Rock = 1
+Paper = 2
+Scissors = 3
+*/
 
 int computer()
 {
