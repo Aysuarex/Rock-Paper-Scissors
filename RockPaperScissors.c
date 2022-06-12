@@ -1,10 +1,9 @@
 /**
  * @file RockPaperScissors.c
  * @author Suara Ayomide(aysuarex@gmail.com)
- * @brief 
  *  
- * computer -
- * main -
+ * main - A program that runs a game of rock-paper-scissors
+ * computer - 
  * checkWin -
  * 
  * @date 2022-06-11
@@ -20,14 +19,13 @@
 int computer();
 int checkWin();
 int checkwin; //Variable storing the return value for checkWin() function
-//int number;
-//char dummy;
+int comp; // Variable that stores the return value of function computer()
 char choice[8];
 char name[11];
 int decision;
+int random; //Variable that stores the last two digits of a randomly generated number
 int playerscore = 0;
 int computerscore = 0;
-//char choice;
 
 int main()
 {
@@ -51,22 +49,16 @@ int main()
         {
             decision = 1;
             printf("You chose Rock\n\n");
-           // Sleep(1000);
-            //goto START;
         }
     else if (strcmp(choice, "paper") == 0 || strcmp(choice, "Paper") == 0 ||  strcmp(choice, "P") == 0 || strcmp(choice, "p") == 0)
         {
             decision = 2;
             printf("You chose Paper\n\n");
-            //Sleep(1000);
-           // goto START;
         }
     else if (strcmp(choice, "scissors") == 0 || strcmp(choice, "Scissors") == 0 || strcmp(choice, "S") == 0 || strcmp(choice, "s") == 0)
         {
             decision = 3;
             printf("You chose Scissors\n\n");
-           // Sleep(1000);
-            //goto START;
         }
     else if (strcmp(choice, "X") == 0 || strcmp(choice, "x") == 0 || strcmp(choice, "exit") == 0)
     {
@@ -81,8 +73,6 @@ int main()
         printf("Type rock, paper, or scissors to make a choice\n");
         Sleep(1000);
         printf("You can also simply type R, P or S\n\n");
-        //Sleep(1000);
-        //goto START;
     }
     Sleep(500);
 
@@ -109,22 +99,20 @@ int main()
     return 0;
 }
 
-int n;
-
 int computer()
 {
-    n = rand() % 100;
-    if (n < 33)
+    random = rand() % 100;
+    if (random < 33)
     {
         printf("Computer chose Rock\n");
         return(1);
     }
-    else if (n > 33 && n < 66)
+    else if (random > 33 && random < 66)
     {
         printf("Computer chose Paper\n");
         return(2);
     }
-    else if (n > 66 && n < 100)
+    else if (random > 66 && random < 100)
     {
         printf("Computer chose Scissors\n");
         return (3);
@@ -146,8 +134,6 @@ Rock = 1
 Paper = 2
 Scissors = 3
 */
-
-int comp;
 
 int checkWin()
 {
