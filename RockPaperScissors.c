@@ -32,31 +32,31 @@ int main()
     system("color 0a");
 
     printf("=======================================\n");
-    printf("Welcome to Rock, Paper Scissors!\n");
+    printf("Welcome to Rock-Paper-Scissors!\n");
     printf("Input your Name (Max 10 Characters): ");
     scanf("%s", &name);
     
     Sleep(500);
     START:
 
-    printf("\nMake a choice: Rock Paper or Scissors: \n");
+    printf("\nMake a choice: Rock, Paper or Scissors: \n");
     printf("Type X or exit to quit the game\n\t\t\t==> ");
     scanf("%s", &choice);
 
     if (strcmp(choice, "rock") == 0 || strcmp(choice, "Rock") == 0 || strcmp(choice, "R") == 0 || strcmp(choice, "r") == 0)
         {
             decision = 1;
-            printf("You chose Rock\n\n");
+            printf("You chose Rock\n");
         }
     else if (strcmp(choice, "paper") == 0 || strcmp(choice, "Paper") == 0 ||  strcmp(choice, "P") == 0 || strcmp(choice, "p") == 0)
         {
             decision = 2;
-            printf("You chose Paper\n\n");
+            printf("You chose Paper\n");
         }
     else if (strcmp(choice, "scissors") == 0 || strcmp(choice, "Scissors") == 0 || strcmp(choice, "S") == 0 || strcmp(choice, "s") == 0)
         {
             decision = 3;
-            printf("You chose Scissors\n\n");
+            printf("You chose Scissors\n");
         }
     else if (strcmp(choice, "X") == 0 || strcmp(choice, "x") == 0 || strcmp(choice, "exit") == 0)
     {
@@ -71,6 +71,7 @@ int main()
         printf("Type rock, paper, or scissors to make a choice\n");
         Sleep(1000);
         printf("You can also simply type R, P or S\n\n");
+        goto START;
     }
     Sleep(500);
 
@@ -85,11 +86,11 @@ int main()
         playerscore++;
     }
     
-    printf("\n--------------------------------\n"); 
+    printf("--------------------------------\n"); 
     printf("Scoresheet\n");
     printf("%s = %d\n", name, playerscore);
     printf("Computer = %d\n", computerscore);
-    printf("--------------------------------\n");
+    printf("--------------------------------\n\n");
 
     Sleep(1000);
     goto START;
@@ -108,22 +109,22 @@ int computer()
     random = rand() % 100;
     if (random < 33)
     {
-        printf("Computer chose Rock\n");
+        printf("Computer chose Rock\n\n");
         return(1);
     }
     else if (random > 33 && random < 66)
     {
-        printf("Computer chose Paper\n");
+        printf("Computer chose Paper\n\n");
         return(2);
     }
     else if (random > 66 && random < 100)
     {
-        printf("Computer chose Scissors\n");
+        printf("Computer chose Scissors\n\n");
         return (3);
     }
     else 
     {
-        printf("Computer chose Paper\n");
+        printf("Computer chose Paper\n\n");
         return 2;
     }
 }
@@ -145,47 +146,47 @@ int checkWin()
 
     if (comp == 1 && decision== 1) 
     {
-        printf("Draw! You both chose Rock\n\n");
+        printf("Draw! You both chose Rock\n");
         return (-1);
     }
     else if (comp == 2 && decision== 1)
     {
-        printf("You Lose! Paper wraps Rock\n\n");
+        printf("You Lose! Paper wraps Rock\n");
         return (0);
     }
     else if (comp == 3 && decision== 1)
     {
-        printf("You Win! Rock smashes Scissors\n\n");
+        printf("You Win! Rock smashes Scissors\n");
         return (1);
     }
     else if (comp == 1 && decision== 2)
     {
-        printf("You Win! Paper wraps Rock\n\n");
+        printf("You Win! Paper wraps Rock\n");
         return (1);
     }
     else if (comp == 2 && decision== 2)
     {
-        printf("Draw! You both chose Paper\n\n");
+        printf("Draw! You both chose Paper\n");
         return (-1);
     }
     else if (comp == 3 && decision== 2)
     {
-        printf("You Lose! Scissors cuts Paper\n\n");
+        printf("You Lose! Scissors cuts Paper\n");
         return (0);
     }
     else if (comp == 1 && decision== 3)
     {
-        printf("You lose! Rock smashes Scissors\n\n");
+        printf("You lose! Rock smashes Scissors\n");
         return (0);
     }
     else if (comp == 2 && decision== 3)
     {
-        printf("You Win! Scissors cuts Paper\n\n");
+        printf("You Win! Scissors cuts Paper\n");
         return (1);
     }
     else if (comp == 3 && decision== 3)
     {
-        printf("Draw! You both chose Scissors\n\n");
+        printf("Draw! You both chose Scissors\n");
         return (-1);
     }
 }
