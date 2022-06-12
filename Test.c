@@ -1,173 +1,98 @@
-/**
- * @file RockPaperScissors.c
- * @author Suara Ayomide(aysuarex@gmail.com)
- * @brief 
- *  
- * computer -
- * main -
- * checkWin -
- * 
- * @date 2022-06-11
- */
-
+// C program for the above approach
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <windows.h>
-#include <string.h>
 
+// Function to implement the game
+int game(char you, char computer)
+{
+	// If both the user and computer
+	// has chose the same thing
+	if (you == computer)
+		return -1;
 
-int computer();
-int checkWin();
-//int score();
-int number;
-char dummy;
-char choice[8];
-char name[11];
-int decision;
-int playerscore = 0;
-int computerscore = 0;
-//char choice;
+	// If user's choice is stone and
+	// computer's choice is paper
+	if (you == 's' && computer == 'p')
+		return 0;
 
+			// If user's choice is paper and
+			// computer's choice is stone
+			else if (you == 'p' && computer == 's') return 1;
+
+	// If user's choice is stone and
+	// computer's choice is scissor
+	if (you == 's' && computer == 'z')
+		return 1;
+
+	// If user's choice is scissor and
+	// computer's choice is stone
+	else if (you == 'z' && computer == 's')
+		return 0;
+
+	// If user's choice is paper and
+	// computer's choice is scissor
+	if (you == 'p' && computer == 'z')
+		return 0;
+
+	// If user's choice is scissor and
+	// computer's choice is paper
+	else if (you == 'z' && computer == 'p')
+		return 1;
+}
+
+// Driver Code
 int main()
 {
-    srand(time(NULL));
-    system("cls");
+	// Stores the random number
+	int n;
 
-    printf("=======================================\n");
-    printf("Welcome to Rock, Paper Scissors!\n");
-    printf("Input your Name (Max 10 Characters): ");
-    scanf("%s", &name);
-    
-    Sleep(500);
-    START:
+	char you, computer, result;
 
-    printf("\nMake a choice: Rock Paper or Scissors: \n");
-    printf("Type X to exit\n\t\t\t==> ");
-    scanf("%s", &choice);
+	// Chooses the random number
+	// every time
+	srand(time(NULL));
 
-    if (strcmp(choice, "rock") == 0 || strcmp(choice, "Rock") == 0 || strcmp(choice, "R") == 0 || strcmp(choice, "r") == 0)
-        {
-            decision = 1;
-            printf("You chose Rock\n\n\n");
-           // Sleep(1000);
-            //goto START;
-        }
-    else if (strcmp(choice, "paper") == 0 || strcmp(choice, "Paper") == 0 ||  strcmp(choice, "P") == 0 || strcmp(choice, "p") == 0)
-        {
-            decision = 2;
-            printf("You chose Paper\n\n\n");
-            //Sleep(1000);
-           // goto START;
-        }
-    else if (strcmp(choice, "scissors") == 0 || strcmp(choice, "Scissors") == 0 || strcmp(choice, "S") == 0 || strcmp(choice, "s") == 0)
-        {
-            decision = 3;
-            printf("You chose Scissors\n\n\n");
-           // Sleep(1000);
-            //goto START;
-        }
-    else if (strcmp(choice, "X") == 0 || strcmp(choice, "x") == 0)
-    {
-        exit(0);
-    }
+	// Make the random number less
+	// than 100, divided it by 100
+	n = rand() % 100;
 
-    else 
-    {
-        Sleep(500);
-        printf("\n------------------------------------\n");
-        printf("INVALID CHOICE!\n");
-        Sleep(500);
-        printf("Type rock, paper, or scissors to make a choice\n");
-        Sleep(1000);
-        printf("You can also simply type R, P or S\n\n\n");
-        //Sleep(1000);
-        //goto START;
-    }
-    Sleep(500);
-    checkWin();
+	// Using simple probability 100 is
+	// roughly divided among stone,
+	// paper, and scissor
+	if (n < 33)
 
-    //To increase the scores
-    if (checkWin == 0) //If player loses
-    {
-        computerscore++;
-    }
-    else if (checkWin == 1) //If player wins
-    {
-        playerscore++;
-    }
-    
-    printf("Scoresheet\n");
-    printf("%s = %d\n", name, playerscore);
-    printf("Computer = %d\n", computerscore);
+		// s is denoting Stone
+		computer = 's';
 
+	else if (n > 33 && n < 66)
 
-    Sleep(1000);
-    goto START;
+		// p is denoting Paper
+		computer = 'p';
 
-    return 0;
-}
+	// z is denoting Scissor
+	else
+		computer = 'z';
 
-int computer()
-{
-    return 1;
-}
+	printf("\n\n\n\n\t\t\t\tEnter s for STONE, p for PAPER and z for SCISSOR\n\t\t\t\t\t\t\t");
 
-/* For This Function:
-return value 1  ==> Player Won
-return value 0  ==> Computer Won
-return value -1 ==> Draw
+	// input from the user
+	scanf("%c", &you);
 
-Also Recall:
-Rock = 1
-Paper = 2
-Scissors = 3
-*/
-int checkWin()
-{
-    if (computer() == 1 && decision== 1) 
-    {
-        printf("Draw! You both chose Rock\n\n\n");
-        return (-1);
-    }
-    else if (computer() == 2 && decision== 1)
-    {
-        printf("You Lose! Paper wraps Rock\n\n\n");
-        return (0);
-    }
-    else if (computer() == 3 && decision== 1)
-    {
-        printf("You Win! Rock smashes Scissors\n\n\n");
-        return (1);
-    }
-    else if (computer() == 1 && decision== 2)
-    {
-        printf("You Win! Paper wraps Rock\n\n\n");
-        return (1);
-    }
-    else if (computer() == 2 && decision== 2)
-    {
-        printf("Draw! You both chose Paper\n\n\n");
-        return (-1);
-    }
-    else if (computer() == 3 && decision== 2)
-    {
-        printf("You Lose! Scissors cuts Paper\n\n\n");
-        return (0);
-    }
-    else if (computer() == 1 && decision== 3)
-    {
-        printf("You lose! Rock smashes Scissors\n\n\n");
-        return (0);
-    }
-    else if (computer() == 2 && decision== 3)
-    {
-        printf("You Win! Scissors cuts Paper\n\n\n");
-        return (1);
-    }
-    else if (computer() == 3 && decision== 3)
-    {
-        printf("Draw! You both chose Scissors\n\n\n");
-        return (-1);
-    }
+	// Function Call to play the game
+	result = game(you, computer);
+
+	if (result == -1) {
+		printf("\n\n\t\t\t\tGame Draw!\n");
+	}
+	else if (result == 1) {
+		printf("\n\n\t\t\t\tWow! You have won the game!\n");
+	}
+	else {
+		printf("\n\n\t\t\t\tOh! You have lost the game!\n");
+	}
+		printf("\t\t\t\tYOu choose : %c and Computer choose : %c\n",you, computer);
+
+	return 0;
 }
