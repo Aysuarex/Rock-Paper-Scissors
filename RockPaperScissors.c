@@ -29,7 +29,7 @@ int main()
 {
     srand(time(NULL));
     system("cls");
-    system("color 0a");
+    system("color 0e");
 
     printf("=======================================\n");
     printf("Welcome to Rock-Paper-Scissors!\n");
@@ -109,23 +109,48 @@ int computer()
     random = rand() % 100;
     if (random < 33)
     {
+        
+        printf("     ______\n");
+        printf("---'   ____)\n");
+        printf("      (_____)\n");
+        printf("      (_____)\n");
+        printf("      (____)\n");
+        printf("---.__(___)\n");
         printf("Computer chose Rock\n\n");
         return(1);
     }
     else if (random > 33 && random < 66)
     {
+        printf("    _______\n");
+        printf("---'   ____)______\n");
+        printf("          ________)\n");
+        printf("          _________)\n");
+        printf("         _________)\n");
+        printf("---.____________)\n");
         printf("Computer chose Paper\n\n");
         return(2);
     }
     else if (random > 66 && random < 100)
     {
+        printf("    _______\n");
+        printf("---'   ____)_____\n");
+        printf("           _______)\n");
+        printf("       ____________)\n");
+        printf("      (____)\n");
+        printf("---.__(___)\n");
         printf("Computer chose Scissors\n\n");
         return (3);
     }
     else 
     {
+        printf("    _______\n");
+        printf("---'   ____)____\n");
+        printf("          ______)\n");
+        printf("          _______)\n");
+        printf("         _______)\n");
+        printf("---.__________)\n");
         printf("Computer chose Paper\n\n");
-        return 2;
+        return(2);
     }
 }
 
