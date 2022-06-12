@@ -5,7 +5,7 @@
 ## Introduction :eyes: 
 This is a single-player game of Rock-Paper-Scissors played against the computer, made in C language.
 
-## How It works :rocket:
+## How It Works :rocket:
 
  First, the player is prompted for a name, which is saved for use on the scoresheet.
 
