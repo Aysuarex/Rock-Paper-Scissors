@@ -20,6 +20,8 @@ s or S respectively
 
 The Program then generates a random result (Rock, paper, or scissors) as well and that is compared with your own input to determine the winner.
 
+Press X or exit at any point of the game to quit
+
 
 ## The Rules 📜
 
@@ -34,7 +36,7 @@ Scissors cuts paper
 
 ### Scoresheet 📖
 
-The score is saved and
-The score is gone once you quit the program
+The score is saved and printed on the screen after every round.\
+The scores keep increasing until the player quits the game.
 
 ### Project By [Suara Ayomide](https://twitter.com/aysuarex)
