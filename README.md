@@ -1,11 +1,11 @@
 # Rock-Paper-Scissors 🪨 🧻 ✂️
 
 ## Introduction :eyes: 
-This is a ------ made in C language.
+This is a single-player game of Rock-Paper-Scissors played against the computer, made in C language.
 
 ## How It works :rocket:
 
-* First, you are prompted to 
+* The player is prompted for a name, which is to be used on the score 
 
 ## The Rules:
 
